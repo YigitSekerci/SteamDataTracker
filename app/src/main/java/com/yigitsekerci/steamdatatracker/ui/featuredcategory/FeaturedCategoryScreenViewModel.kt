@@ -31,7 +31,7 @@ class FeaturedCategoryScreenViewModel @Inject constructor(
         }
     }
 
-    private fun getFeaturedCategories(fromRemote: Boolean = false) {
+    fun getFeaturedCategories(fromRemote: Boolean = false) {
         searchJob?.cancel()
         searchJob = viewModelScope.launch {
             state = state.copy(isLoading = true)
